@@ -16,7 +16,7 @@ export default function Home() {
         {/* IMAGE CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 relative">
           <Image
-            src="/public/hero.png"
+            src="/public/hero4.png"
             alt=""
             fill
             className="object-contain"
