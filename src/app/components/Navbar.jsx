@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -91,13 +90,13 @@ const Navbar = () => {
       {/* SOCIAL */}
       <div className="hidden md:flex gap-4 w-1/3 justify-end">
         <Link href="https://github.com/Ados1" target="_blank">
-          <img src="/public/github.png" alt="" className="w-[24px] h-[24px]" />
+          <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
         <Link
           href="https://www.linkedin.com/in/emmanuel-adodoadjie"
           target="_blank"
         >
-          <img src="/public/linkedin.png" alt="" width={24} height={24} />
+          <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>
 
