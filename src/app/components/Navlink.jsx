@@ -3,14 +3,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { AnimatePresence } from "framer-motion";
 
 const Navlink = ({ link }) => {
   const pathName = usePathname();
 
   return (
     <Link
-      className={`rounded p-1 ${
-        pathName === link.url && "bg-black text-white"
+      className={`rounded p-1 hover:bg-white hover:text-black ${
+        pathName === link.url
       }`}
       href={link.url}
     >

@@ -1,9 +1,10 @@
-"use client"
+"use client";
 
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import ContactPage from "../contact/page";
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
@@ -34,10 +35,10 @@ const TransitionProvider = ({ children }) => {
           initial={{ height: "140vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />
-        <div className="h-24">
-          <Navbar />
+        <div className="h-24"></div>
+        <div className="h-[calc(100vh-6rem)]">
+          <ContactPage />
         </div>
-        <div className="h-[calc(100vh-6rem)]">{children}</div>
       </div>
     </AnimatePresence>
   );

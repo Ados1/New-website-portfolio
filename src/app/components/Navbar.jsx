@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 import { useState } from "react";
 import Navlink from "./Navlink";
@@ -68,9 +69,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-sl">
+    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-sl bg-[#10131C] pt-4">
       {/* LINKS */}
-      <div className="hidden md:flex gap-4 w-1/3 ">
+      <div className="hidden text-white md:flex gap-4 w-1/3 ">
         {links.map((link) => (
           <Navlink link={link} key={link.title} />
         ))}
@@ -90,13 +91,23 @@ const Navbar = () => {
       {/* SOCIAL */}
       <div className="hidden md:flex gap-4 w-1/3 justify-end">
         <Link href="https://github.com/Ados1" target="_blank">
-          <Image src="public\github.png" alt="" width={24} height={24} />
+          <img
+            src="/public/github.png"
+            alt="github symbol"
+            width={24}
+            height={24}
+          />
         </Link>
         <Link
           href="https://www.linkedin.com/in/emmanuel-adodoadjie"
           target="_blank"
         >
-          <Image src="public\linkedin.png" alt="" width={24} height={24} />
+          <img
+            src="/public/linkedin.png"
+            alt="linkedin symbol"
+            width={24}
+            height={24}
+          />
         </Link>
       </div>
 
@@ -110,17 +121,17 @@ const Navbar = () => {
           <motion.div
             variants={topVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-10 h-1 bg-white rounded origin-left"
           ></motion.div>
           <motion.div
             variants={centerVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded"
+            className="w-10 h-1 bg-white rounded"
           ></motion.div>
           <motion.div
             variants={bottomVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-10 h-1 bg-white rounded origin-left"
           ></motion.div>
         </button>
 

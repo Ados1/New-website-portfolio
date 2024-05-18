@@ -12,7 +12,7 @@ const items = [
     id: 1,
     color: "from-orange-300 to-yellow-300",
     title: "Audiophile Ecommerce",
-    desc: "Driven by HHTML 5, CSS 3, Javascript AND React.Js, This project showcases not only my technical skills but also my dedication to creating seamless user experiences. Welcome to the future of online audio retail – where innovation meets impeccable sound. PLEASE SCROLL THROUGH THE SCREENS. ",
+    desc: "Driven by HHTML 5, CSS 3, Javascript and React.Js, This project showcases not only my technical skills but also my dedication to creating seamless user experiences. Welcome to the future of online audio retail – where innovation meets impeccable sound. PLEASE SCROLL THROUGH THE SCREENS. ",
     phone_img: "/audiophile-ecommerce-phone view.png",
     laptop_img: "/audiophile-ecommerce-laptop view.png",
     phone: "/phone.png",
@@ -48,17 +48,17 @@ const items = [
     id: 4,
     color: "from-purple-300 to-red-300",
     title: "SmartHome Website",
-    desc: "Driven by HHTML 5, CSS 3, Javascript AND React.Js, This project showcases not only my technical skills but also my dedication to creating seamless user experiences. Welcome to the future of online audio retail – where innovation meets impeccable sound. PLEASE SCROLL THROUGH THE SCREENS. ",
-    phone_img: "/audiophile-ecommerce-phone view.png",
-    laptop_img: "/audiophile-ecommerce-laptop view.png",
+    desc: "Welcome to  SmartHome website, where innovation meets convenience at the click of a button. Crafted with HTML, CSS, and JavaScript, the platform seamlessly integrates cutting-edge technology to offer you an immersive experience. PLEASE SCROLL THROUGH THE SCREENS. ",
+    phone_img: "/smarthome_phoneview.png",
+    laptop_img: "/smarthome_laptopview.png",
     phone: "/phone.png",
     laptop: "/laptop.png",
-    link: "https://audiophile-ecommerce-bay.vercel.app/",
-    link2: "",
+    link: "https://ados1.github.io/SmartHome/",
+    link2: "https://github.com/Ados1/SmartHome",
   },
 ];
 
-const portfolioPage = () => {
+const PortfolioPage = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({ target: ref });
@@ -134,15 +134,15 @@ const portfolioPage = () => {
                     <button className=" h-5  flex items-center p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-1 rounded">
                       See Demo
                     </button>
-                    <Link
-                      href={item.link2}
-                      target="_blank"
-                      className="flex justify-center"
-                    >
-                      <button className="h-5  flex items-center p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-1 rounded">
-                        Source Code
-                      </button>
-                    </Link>
+                  </Link>
+                  <Link
+                    href={item.link2}
+                    target="_blank"
+                    className="flex justify-center"
+                  >
+                    <button className="h-5  flex items-center p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-1 rounded">
+                      Source Code
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -173,6 +173,7 @@ const portfolioPage = () => {
           </motion.svg>
           <Link
             href="/contact"
+            target="_blank"
             className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
           >
             Hire Me
@@ -183,4 +184,4 @@ const portfolioPage = () => {
   );
 };
 
-export default portfolioPage;
+export default PortfolioPage;
