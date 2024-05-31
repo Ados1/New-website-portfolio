@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Navlink from "./Navlink";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const links = [
   { url: "/", title: "Home" },
@@ -92,22 +93,17 @@ const Navbar = () => {
       <div className="hidden md:flex gap-4 w-1/3 justify-end">
         <Link href="https://github.com/Ados1" target="_blank">
           <img
-            src="/public/github.png"
+            src="/GitHub-Icon-White-Dark-Background-Logo.wine.svg"
             alt="github symbol"
-            width={24}
-            height={24}
+            width={36}
+            height={36}
           />
         </Link>
         <Link
           href="https://www.linkedin.com/in/emmanuel-adodoadjie"
           target="_blank"
         >
-          <img
-            src="/public/linkedin.png"
-            alt="linkedin symbol"
-            width={24}
-            height={24}
-          />
+          <img src="/linkedin.png" alt="linkedin" width={24} height={24} />
         </Link>
       </div>
 

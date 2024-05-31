@@ -1,10 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import { motion, useScroll, useInView, AnimatePresence } from "framer-motion";
 import Brain from "../components/Brain";
 import { useRef } from "react";
-import Spline from "@splinetool/react-spline";
+import gsap from "gsap-trial";
+import { SplitText } from "gsap-trial/SplitText";
+import { ScrollTrigger } from "gsap-trial/all";
 
 const AboutPage = () => {
   const containerRef = useRef();
@@ -13,6 +16,23 @@ const AboutPage = () => {
 
   const skillRef = useRef();
   const isSkillRefInView = useInView(skillRef);
+
+  gsap.registerPlugin(SplitText, ScrollTrigger);
+
+  let mySplitText = new SplitText(".split", { type: "chars" });
+
+  let chars = mySplitText.chars;
+  gsap.from(chars, {
+    xPercent: -3300,
+    stagger: 0.03,
+    ease: "back.out",
+    duration: 0.6,
+    scrollTrigger: {
+      trigger: ".split",
+      start: "top 80%",
+    },
+  });
+
   return (
     <AnimatePresence>
       <motion.div
@@ -23,7 +43,7 @@ const AboutPage = () => {
       >
         {/* CONTAINER */}
         <div
-          className="h-full overflow-y-scroll no-scrollbar lg:flex bg"
+          className="h-full overflow-y-scroll no-scrollbar lg:flex bg-gradient-to-t from-[#DD9F9F] to-black"
           ref={containerRef}
         >
           {/* TEXT CONTAINER  */}
@@ -31,9 +51,9 @@ const AboutPage = () => {
             {/* BIOGRAPHY CONTAINER */}
             <div className="flex flex-col gap-12 justify-center">
               {/* BIOGRAPHY TITLE */}
-              <h1 className="font-bold text-2xl">ABOUT</h1>
+              <h1 className="font-bold text-2xl text-white">ABOUT</h1>
               {/* BIOGRAPHY DESC */}
-              <p className="text-lg ">
+              <p className="text-lg split text-white">
                 In my journey from a quantity surveyor to a front-end developer,
                 I've seamlessly transitioned my meticulous attention to detail
                 and analytical mindset into the realm of technology. With a
@@ -135,6 +155,10 @@ const AboutPage = () => {
           {/* SVG CONTAINER */}
           <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
             {/* <Brain scrollYProgress={scrollYProgress} /> */}
+            <img
+              src="/freepik-new-project-202405221831213pI9.png"
+              alt="my picture"
+            />
           </div>
         </div>
       </motion.div>

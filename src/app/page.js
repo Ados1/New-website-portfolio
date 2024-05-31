@@ -45,9 +45,9 @@ export default function Home() {
         </div>
         {/* TEXT CONTAINER */}
 
-        <div className="  flex flex-col gap-8 items-center justify-center absolute left-20 top-56">
+        <div className=" sm:hidden  md:block flex flex-col gap-8 items-center justify-center absolute left-20 top-56 ">
           {/* Desc */}
-          <p className="text-base text-white w-64 ">
+          <p className="text-base text-white w-64 pb-7">
             A <strong>front-end developer</strong> passionate about blending
             design and technology to create engaging user experiences. With
             expertise in HTML, CSS, JavaScript and React.Js . Specialized in
